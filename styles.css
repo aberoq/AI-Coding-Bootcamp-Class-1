@@ -5,92 +5,108 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #f5f5f5;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
+    padding: 32px 20px;
 }
 
 .cards-container {
     display: flex;
     flex-direction: row;
-    gap: 24px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    gap: 28px;
     justify-content: center;
     align-items: flex-start;
+    max-width: 1200px;
 }
 
+/* D-shape: straight left edge, semicircular right (radius = half height) */
 .card {
-    background-color: #f2f1ed;
-    border-radius: 12px;
-    padding: 40px 32px;
-    width: 320px;
+    --card-h: 400px;
+    --card-w: 260px;
+    --radius: calc(var(--card-h) / 2);
+    position: relative;
+    width: var(--card-w);
+    min-height: var(--card-h);
+    padding: 28px 32px 28px 28px;
+    border: 4px solid #000;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    box-shadow: 10px 10px 0 0 #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     flex-shrink: 0;
+    color: #000;
+}
+
+.card--hobby {
+    background-color: #ffe600;
+}
+
+.card--pro {
+    background-color: #00f0a0;
+}
+
+.card--business {
+    background-color: #ff4d9d;
+}
+
+.card-body {
+    margin-top: auto;
 }
 
 .card-title {
-    font-size: 32px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 8px;
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
 }
 
 .card-price {
-    font-size: 20px;
-    color: #666;
-    margin-bottom: 24px;
-}
-
-.card-content {
-    margin-bottom: 32px;
-}
-
-.includes-text {
-    font-size: 16px;
-    color: #333;
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
     margin-bottom: 16px;
+    opacity: 0.95;
 }
 
-.features-list {
-    list-style: none;
-    padding: 0;
+.card-tagline {
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    max-width: 12em;
 }
 
-.features-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-    font-size: 15px;
-    color: #333;
-}
-
-.checkmark {
-    color: #4a4a4a;
-    font-size: 18px;
-    margin-right: 12px;
-    font-weight: bold;
-}
-
-.download-button {
-    width: fit-content;
-    background-color: #e6e5e0;
-    border: none;
-    border-radius: 999px;
-    padding: 14px 24px;
-    font-size: 16px;
-    font-weight: 500;
-    color: #333;
+.card-cta {
+    margin-top: 22px;
+    align-self: flex-start;
+    padding: 12px 20px;
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #fff;
+    background-color: #000;
+    border: 3px solid #000;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    box-shadow: 6px 6px 0 0 #000;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
-.download-button:hover {
-    background-color: #D8D6CE;
+.card-cta:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 4px 4px 0 0 #000;
 }
 
-.download-button:active {
-    background-color: #D8D6CE;
+.card-cta:active {
+    transform: translate(4px, 4px);
+    box-shadow: 2px 2px 0 0 #000;
 }

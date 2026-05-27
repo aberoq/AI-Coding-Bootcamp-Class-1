@@ -8,54 +8,30 @@
 </head>
 <body>
     <div class="cards-container">
-        <div class="card">
-            <h1 class="card-title">Hobby</h1>
-            <p class="card-price">Free</p>
-            <div class="card-content">
-                <p class="includes-text">Includes:</p>
-                <ul class="features-list">
-                    <li>
-                        <span class="checkmark">✓</span>
-                        No credit card required
-                    </li>
-                    <li>
-                        <span class="checkmark">✓</span>
-                        Limited Agent requests
-                    </li>
-                    <li>
-                        <span class="checkmark">✓</span>
-                        Limited Tab completions
-                    </li>
-                </ul>
+        <article class="card card--hobby">
+            <div class="card-body">
+                <h2 class="card-title">Hobby</h2>
+                <p class="card-price">Free</p>
+                <p class="card-tagline">Ship solo.<br>No card.</p>
             </div>
-            <button class="download-button">Download</button>
-        </div>
-        <div class="card">
-            <h1 class="card-title">Pro</h1>
-            <p class="card-price">$20/mo.</p>
-            <div class="card-content">
-                <p class="includes-text">Everything in Hobby, plus:</p>
-                <ul class="features-list">
-                    <li>
-                        <span class="checkmark">✓</span>
-                        Extended limits on Agent
-                    </li>
-                    <li>
-                        <span class="checkmark">✓</span>
-                        Unlimited Tab completions
-                    </li>
-                    <li>
-                        <span class="checkmark">✓</span>
-                        Background Agents
-                    </li>
-                    <li>
-                        <span class="checkmark">✓</span>
-                        Maximum context windows
-                    </li>
-                </ul>
+            <button type="button" class="card-cta">Download</button>
+        </article>
+        <article class="card card--pro">
+            <div class="card-body">
+                <h2 class="card-title">Pro</h2>
+                <p class="card-price">$20/mo</p>
+                <p class="card-tagline">Power user.<br>Unlimited tabs.</p>
             </div>
-            <button class="download-button">Get Pro</button>
-        </div>
+            <button type="button" class="card-cta">Get Pro</button>
+        </article>
+        <article class="card card--business">
+            <div class="card-body">
+                <h2 class="card-title">Business</h2>
+                <p class="card-price">$40/mo</p>
+                <p class="card-tagline">Teams &amp; billing.<br>SSO ready.</p>
+            </div>
+            <button type="button" class="card-cta">Get Business</button>
+        </article>
     </div>
 </body>
 </html>
